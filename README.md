@@ -1,7 +1,7 @@
-# Lab 7 · Loop tools
+# Lab 7 · Two arrays
 
-**Week 07 · Loops**  
-**Theme:** Do it again on purpose  
+**Week 07 · Arrays**  
+**Theme:** One name, many values  
 **Type:** Lesson week
 
 
@@ -10,66 +10,73 @@
 Paste a link to a short video of you running this assignment (tool + code + run).
 Work without a working video link is incomplete.
 
+The video should show both arrays, including the index, the element, the sum, and the high score.
+
 **Your demo:** _add your link here_
 
 
-## Scenario
-A loop repeats a block of code while a condition stays true. Every loop needs a start value, a test, and an update. If the update is missing, the loop never ends.
+## What to build
 
-## Goals
-- A validator: `do while` until the input is in range
-- A countdown or table with `for`
-- Prove it stops: show a bad input, then a good one, then the count
-- Push + short demo + Canvas
+You will declare two homogeneous arrays of five `int` elements and traverse each array once by subscript.
+
+- Declare `const int N = 5`, `int quiz[N] = { ... }`, and `int lab[N] = { ... }` with ten integers you choose.
+- For each array, traverse with `for (int i = 0; i < N; ++i)`.
+- Print a label, then the index and the element. `[0] 88` means index 0 stores 88.
+- Keep a `sum` of the elements, not the indexes. After the loop, print `Sum:` and the total.
+- Initialize `hi` to the first element. After the loop, print `High:` and the maximum.
+- If every element is equal, the maximum is that element.
+- `i <= N` is out of bounds. The last valid index is `N - 1`.
+
+Your numbers and your labels can differ. Both arrays must print.
+
+Example.
+
+```
+Quiz
+[0] 88
+[1] 92
+[2] 70
+[3] 95
+[4] 81
+Sum: 426
+High: 95
+Lab
+[0] 70
+[1] 70
+[2] 70
+[3] 70
+[4] 70
+Sum: 350
+High: 70
+```
 
 ## Starter
-Use `main.cpp`. Put your name in the file-top comment.
+
+Use `main.cpp`. Put your name in the file-top comment. The starter is only `main`. You decide the variables.
 
 ## Environment
+
 VS 2022 · **GitHub Codespaces** · Replit · library machines
 
-## Procedure
-1. Ask for a number in a range (for example 1–10)
-2. Repeat until it’s valid (`do while`)
-3. Count down (or print a small table) with `for`
-4. In the demo: type a bad value, then a good one
-5. Commit, push, Canvas
+## Scope fence
 
-## Sample output
-```
-Enter 1-10: 0
-Enter 1-10: 4
-Countdown:
-4
-3
-2
-1
-```
+No `goto`. No `vector`. No function other than `main`.
 
 ## Definition of done
+
 - Compiles with zero errors
-- Validation loop + a counting loop
-- Demo shows a rejected input
+- Two arrays of five `int` elements, each traversed once
+- Each array prints its index and element, then `Sum:` and `High:`
 - Repo + short demo + Canvas
 
 ## Rubric (100)
+
 | Criterion | Pts |
 |-----------|----:|
 | Runs correctly on a supported path | 40 |
 | Meets prompt requirements | 30 |
-| Clear prompts / output | 15 |
+| Clear outcome messages | 15 |
 | GitHub + short demo video | 15 |
-
-## Scope fence
-No `goto`. No arrays required yet. Functions not required.
-
-## Tips
-- If it never ends, look at the **update** (`--i`, or a new `cin`)
-- Off-by-one is a fencepost: 1 through n, or 0 through n-1?
-- `for` when you can count. `do while` when you must ask first
-
-## Help (`/ring`)
-After a real try, include: goal · what you tried · exact error · screenshot/repo · OS + tool.
 
 ## Getting started
 
@@ -82,6 +89,6 @@ g++ -std=c++17 -o program main.cpp && ./program
 ```
 
 On Windows (Visual Studio), open `main.cpp` and use **Local Windows Debugger**.
-4. Record a short demo that shows your tool, your code, and a real run.
+4. Record a short demo that shows your tool, your code, and a real run. Show both arrays.
 5. Paste the video link in the **Demo video** section above.
 6. Submit your fork URL on Canvas.
